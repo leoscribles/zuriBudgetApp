@@ -1,0 +1,96 @@
+class Budget:
+    def __init__(self, name, startingAmount):
+        self.name = name
+        self.startingAmount = startingAmount
+
+        print('Start organizing your life today, with one button.')
+        print('Press Enter')
+        Enter = input()
+        if Enter == ' ':
+            firstJunction()
+        else:
+            print('Invalid option selected. Please try again.')
+
+    def deposit(self):
+        print(f'This deposits funds to {self.name}')
+        print('How much do you want to deposit')
+        print('1. 500')
+        print('2. 1000')
+        print('3. 2000')
+        print('4. 5000')
+        # print('5. Other')
+        print('0. Go Back \n')
+
+        selectedDeposit = int(input())
+
+        if selectedDeposit == 1:
+            print(f'Congrats. You\'ve just deposit 500 for your {self.name} budget. Thank you.')
+            #exitorgoback()
+        elif selectedDeposit == 2:
+            print(f'Congrats. You\'ve just deposit 1000 for your {self.name} budget. Thank you.')
+            #exitorgoback()
+        elif selectedDeposit == 3:
+            print(f'Congrats. You\'ve just deposit 2000 for your {self.name} budget. Thank you.')
+            #exitorgoback()
+        elif selectedDeposit == 4:
+            print(f'Congrats. You\'ve just deposit 5000 for your {self.name} budget. Thank you.')
+            #exitorgoback()
+
+    def withdraw(self):
+        print(f'This withdraws funds from {self.name}')
+    def balance(self):
+        print(f'This checks balance for {self.name}')
+    def transfer(self):
+        print(f'This transfers funds for {self.name}')
+
+def firstJunction():
+    budgetSelection()
+
+    selectedBudget = int(input())
+
+    if selectedBudget == 1:
+        actionSelection()
+        secondJunction()
+            
+    elif selectedBudget == 2:
+        actionSelection()
+        secondJunction()
+
+    elif selectedBudget == 3:
+        actionSelection()
+        secondJunction()
+
+    else:
+        print('Invalid option selected. Please try again')
+
+def budgetSelection():
+    print('Select the Budget you want:')
+    print('1. Food')
+    print('2. Clothing')
+    print('3. Entertainment \n')
+
+def actionSelection():
+    print('Select the action you want:')
+    print('1. deposit')
+    print('2. withdraw')
+    print('3. balance')
+    print('4. transfer')
+    print('0. Go back \n')
+def secondJunction():
+    selectedAction = int(input())
+    if selectedAction == 1:
+        self.deposit()
+    elif selectedAction == 2:
+        self.withdraw()
+    elif selectedAction == 3:
+        self.balance()
+    elif selectedAction == 4:
+        self.transfer()
+    elif selectedAction == 0:
+        firstJunction()
+    else:
+        print('Invalid option selected. Please try again')
+            
+budget_1 = Budget('food', 0)
+budget_2 = Budget('clothing', 0)
+budget_3 = Budget('entertainment', 0)
